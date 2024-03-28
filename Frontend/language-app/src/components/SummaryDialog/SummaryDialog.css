@@ -1,0 +1,20 @@
+.SummaryDialog {
+	background-color: #D6D5C9;
+}
+
+.summary-content {
+	background-color: #0A100D;
+}
+
+.summary-dialog-action {
+	background-color: #A22C29;
+	justify-content: flex-end;
+}
+
+.responsive-dialog-title p {
+	color: #B9BAA3;
+}
+
+.dialogContentText p {
+	color: #B9BAA3;
+}

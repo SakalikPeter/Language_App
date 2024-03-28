@@ -1,0 +1,64 @@
+{
+    "en": [
+        {
+            "name": "present indefinite",
+            "category": "tenses",
+            "subcategory": "indefinite tenses",
+            "description": "Describes actions or events happening in the present."
+        },
+        {
+            "name": "future indefinite",
+            "category": "tenses",
+            "subcategory": "indefinite tenses",
+            "description": "Describes actions or events that will happen in the future."
+        },
+        {
+            "name": "past indefinite",
+            "category": "tenses",
+            "subcategory": "indefinite tenses",
+            "description": "Describes actions or events that happened in the past, but not at a specific time."
+        },
+        {
+            "name": "present continuous",
+            "category": "tenses",
+            "subcategory": "continuous tenses",
+            "description": "Describes actions or events that are happening right now or are currently in progress."
+        },
+        {
+            "name": "future continuous",
+            "category": "tenses",
+            "subcategory": "continuous tenses",
+            "description": "Describes actions or events that will be ongoing at a specific future time."
+        },
+        {
+            "name": "past continuous",
+            "category": "tenses",
+            "subcategory": "continuous tenses",
+            "description": "Describes actions or events that were ongoing or in progress at a specific point in the past."
+        },
+        {
+            "name": "present perfect",
+            "category": "tenses",
+            "subcategory": "perfect tenses",
+            "description": "Describes actions or events that happened at an indefinite time in the past but have relevance to the present moment."
+        },
+        {
+            "name": "future perfect",
+            "category": "tenses",
+            "subcategory": "perfect tenses",
+            "description": "Describes actions or events that will be completed before a specific point or action in the future."
+        },
+        {
+            "name": "past perfect",
+            "category": "tenses",
+            "subcategory": "perfect tenses",
+            "description": "Describes actions or events that happened before another action or event in the past."
+        },
+        {
+            "name": "present perfect continuous",
+            "category": "tenses",
+            "subcategory": "perfect continuous tenses",
+            "description": "Describes actions or events that started in the past and are still ongoing or have just stopped."
+        }
+    ]
+}

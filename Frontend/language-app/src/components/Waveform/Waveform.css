@@ -1,0 +1,24 @@
+/* Waveform.css */
+
+.waveform-wrapper {
+	position: relative;
+	background-color: #0A100D;
+	display: flex;
+	flex-direction: column;
+}
+
+.button-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.sound-button {
+	padding-right: 1%;
+}
+
+.speed-button {
+	padding-left: 1%;
+}

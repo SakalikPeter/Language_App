@@ -1,0 +1,62 @@
+/* LessonSetting.css */
+
+.lesson-setting-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #D6D5C9;
+	width: 100%;
+	height: 100vh;
+}
+
+.lesson-setting-form {
+	border: 1px solid #B9BAA3;
+	background-color: #B9BAA3;
+	width: 30%;
+	min-width: 400px;
+	border-radius: 4%;
+}
+
+.lesson-setting-content {
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+.lesson-setting-action {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	border-radius: 0 0 4% 4%;
+	/* Maintain the bottom border-radius only */
+}
+
+.lesson-setting-action-wrapper {
+	background-color: #A22C29;
+	padding: 2%;
+}
+
+
+.title-text {
+	margin-bottom: 15px;
+	font-size: 1.2rem;
+	color: #0A100D;
+}
+
+.radio-text {
+	color: #0A100D !important;
+	font-size: 1.1rem !important;
+	display: flex;
+	justify-content: center;
+}
+
+.radio-group {
+	display: flex;
+	justify-content: center;
+}
+
+.helper-text {
+	color: #A22C29 !important;
+	padding-bottom: 20px;
+
+}
