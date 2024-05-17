@@ -2,7 +2,7 @@ from transformers import (
     pipeline,
     AutoModelForCausalLM,
     AutoTokenizer,
-    BitsAndBytesConfig
+    BitsAndBytesConfig,
 )
 import torch
 from Data.data import get_words_by_category
@@ -14,9 +14,7 @@ bnb_config = BitsAndBytesConfig(
     bnb_4bit_quant_type="nf4",
     bnb_4bit_use_double_quant=True,
 )
-tokenizer = AutoTokenizer.from_pretrained(
-    model_name
-)
+tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
     load_in_4bit=True,
@@ -26,20 +24,17 @@ model = AutoModelForCausalLM.from_pretrained(
     trust_remote_code=True,
 )
 pipe = pipeline(
-    "text-generation", 
-    model=model, 
-    tokenizer = tokenizer, 
-    # torch_dtype=torch.bfloat16, 
+    "text-generation",
+    model=model,
+    tokenizer=tokenizer,
+    # torch_dtype=torch.bfloat16,
     device_map="auto",
     return_full_text=False,
 )
 
+
 def __create_prompt(
-    grammar: str,
-    level: str,
-    words: str,
-    sentence_type: str,
-    sentence_mood: str
+    grammar: str, level: str, words: str, sentence_type: str, sentence_mood: str
 ):
     return f"""
 [INST] Generate 10 {sentence_mood} {grammar} {sentence_type} for {level} level english speaker.
@@ -49,18 +44,20 @@ B level sentences are in the middle between C and A level.
 Focus to include these words in random order: {words}.[/INST]
 """
 
+
 def __generate_sentences(
     prompt: str,
 ):
     sequences = pipe(
         prompt,
         do_sample=True,
-        max_new_tokens=512, 
+        max_new_tokens=512,
         temperature=0.7,
         top_p=0.9,
         num_return_sequences=1,
     )
-    return sequences[0]['generated_text']
+    return sequences[0]["generated_text"]
+
 
 def __proces_sentences(
     input_text: str,
@@ -76,6 +73,7 @@ def __proces_sentences(
         sentences.append(line.split(" ", 1)[1])
 
     return sentences
+
 
 def get_sentences(
     grammar: str,

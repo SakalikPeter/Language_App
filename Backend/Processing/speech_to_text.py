@@ -9,6 +9,7 @@ processor = AutoProcessor.from_pretrained("openai/whisper-medium")
 model = AutoModelForSpeechSeq2Seq.from_pretrained("openai/whisper-medium")
 SAMPLING_RATE = 16000
 
+
 def __transcribe(
     data: np.ndarray,
 ):
@@ -35,6 +36,7 @@ def __transcribe(
     )
     return transcription
 
+
 def __resample_audio(
     audio_arr: np.ndarray,
     samplerate: int,
@@ -48,13 +50,12 @@ def __resample_audio(
     Returns:
         np.ndarray: Resampled audio data.
     """
-    number_of_samples = round(
-        len(audio_arr) * float(SAMPLING_RATE) / samplerate
-    )
+    number_of_samples = round(len(audio_arr) * float(SAMPLING_RATE) / samplerate)
     return resample(
         audio_arr,
         number_of_samples,
     )
+
 
 def __read_audio(
     audio: UploadFile,
@@ -86,6 +87,7 @@ def __read_audio(
         audio_data = np.mean(audio_data, axis=1)
     return audio_data, samplerate
 
+
 def __process_transcribe(
     text: str,
 ) -> str:
@@ -99,6 +101,7 @@ def __process_transcribe(
     """
     # Remove all whitespaces at the beginnig.
     return text.lstrip()
+
 
 def speech_to_text(
     audio: UploadFile,
